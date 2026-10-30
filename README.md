@@ -87,20 +87,6 @@ lab-01/
 
 ---
 
-## Viva Questions & Answers
-
-1. **What is the difference between `package.json` and `node_modules`?**
-   - `package.json` is a lightweight configuration manifest that tracks metadata, scripts, and lists the dependencies and versions your project needs.
-   - `node_modules` is the actual directory containing the installed physical code of all packages and their sub-dependencies downloaded by npm. It is not committed to version control.
-
-2. **What does `app.listen()` do?**
-   - It binds and listens for incoming HTTP connections on the specified port (e.g. 3000) and host, effectively starting the web server.
-
-3. **What do `request` (`req`) and `response` (`res`) represent?**
-   - `req` (Request) is an object containing information about the incoming HTTP request made by the client (such as URL, headers, query parameters, method).
-   - `res` (Response) is an object used to construct and send back the HTTP response to the client (status code, headers, and body data like text or JSON).
-
----
 
 ## Notes: Problems Faced and Solutions
 
@@ -112,9 +98,3 @@ lab-01/
 - **Task 7 (Verification):** Executed the server locally on port 3000, probed each route with real HTTP requests, and captured browser screenshots for submission.
 
 ---
-
-## Course Rules
-- Never commit or share `.env` files.
-- `node_modules/` is excluded via `.gitignore`.
-- Passwords are never stored or logged in plain text.
-- Every route returns the appropriate HTTP status code.
