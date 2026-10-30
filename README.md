@@ -1,62 +1,58 @@
-# Backend Development Fundamentals
+# Lab 1: Node.js and Express server
 
-**Student Details:**
-- **Name:** Puneeth Sai
-- **Registration Number:** 252U1R1204
-- **Branch / Section:** CSE 2D
-- **Course:** Backend Development Fundamentals (Year II Term II)
-- **Institution:** Aurora
-- **Faculty:** Joel Prashanth D
+Puneeth Sai · 252U1R1204 · CSE 2D
 
----
+**Live link:** Not applicable (tested locally with browser/Postman)
 
-## 📚 Course Overview
+## How to run
 
-This repository contains all laboratory exercises and coursework for **Backend Development Fundamentals**, covering server-side programming using Node.js and Express.js, relational database operations with SQLite, RESTful API design, authentication, and MongoDB integration.
+1. Navigate to the project directory:
+   ```bash
+   cd lab-01
+   ```
 
----
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## 🗂️ Lab Index
+3. Run the Express server:
+   ```bash
+   npm start
+   ```
 
-| Lab | Topic | Folder | Status |
-|:---:|:---|:---:|:---:|
-| **Lab 01** | Node.js and Express.js Fundamentals | [`lab-01/`](./lab-01) | ✅ Completed |
-| **Lab 02** | SQLite and Relational Database Operations | `lab-02/` | ⏳ Upcoming |
-| **Lab 03** | RESTful API Development and Validation | `lab-03/` | ⏳ Upcoming |
-| **Lab 04** | Authentication and User Management | `lab-04/` | ⏳ Upcoming |
-| **Lab 05** | Middleware, Authorization and Error Handling | `lab-05/` | ⏳ Upcoming |
-| **Lab 06** | File Handling and Asynchronous Operations | `lab-06/` | ⏳ Upcoming |
-| **Lab 07** | Streams and Data Processing | `lab-07/` | ⏳ Upcoming |
-| **Lab 08** | MongoDB and Node.js Integration | `lab-08/` | ⏳ Upcoming |
-| **Lab 09** | MongoDB CRUD APIs and Query Operations | `lab-09/` | ⏳ Upcoming |
-| **Lab 10** | Secure MongoDB APIs and Backend Integration | `lab-10/` | ⏳ Upcoming |
+4. (Optional) Run the plain HTTP server:
+   ```bash
+   npm run http
+   ```
 
----
+### Environment Variables
+- `PORT` (Optional): The port on which the server listens. Defaults to `3000`.
 
-## 🚀 Lab 01: Node.js and Express Server
+## Endpoints
 
-The implementation and documentation for **Lab 01** is located in the [`lab-01/`](./lab-01) directory.
+| Method | Path | Description | Status Code |
+|--------|------|-------------|-------------|
+| GET | `/` | Welcome text | 200 OK |
+| GET | `/about` | JSON with name and section | 200 OK |
+| GET | `/time` | Current date and time using `new Date()` | 200 OK |
+| GET | any other path | Page not found message | 404 Not Found |
 
-### Quick Start (Lab 01):
-```bash
-cd lab-01
-npm install
-npm start
-```
+## Screenshots
 
-### Endpoints (Lab 01):
-- `GET /` — Welcome text
-- `GET /about` — JSON response with student details (`name`, `section`)
-- `GET /time` — Current date and time using `new Date()`
-- `404 Handler` — Catch-all for unknown paths
+![Home route](screenshots/home.png)
 
-See the [Lab 01 README](./lab-01/README.md) for full documentation, notes, and output screenshots.
+![About route](screenshots/about.png)
 
----
+![Time route](screenshots/time.png)
 
-## 📋 Course Rules & Guidelines
-- Never commit or share `.env` files.
-- `node_modules` are excluded via `.gitignore`.
-- Passwords are never stored or logged in plain text.
-- Every route returns the appropriate HTTP status code.
-- Parameterised queries are used for all database operations.
+![404 for an unknown path](screenshots/not-found.png)
+
+## Notes: problems faced and how you solved them
+
+- **Task 1 (Package setup):** Created the lab folder and ran `npm init -y` to generate `package.json`. Understood `name`, `version`, `scripts`, and `dependencies` fields.
+- **Task 2 (Installing Express):** Installed Express via `npm install express`. Checked that `node_modules` and `package-lock.json` were created.
+- **Task 3 (Plain HTTP Server):** Created `http-server.js` using Node's built-in `http` module and tested responses on port 3000.
+- **Task 4 & 5 (Express Server):** Rewrote the server in `app.js` using `express()`. Created the three required GET routes (`/`, `/about`, `/time`).
+- **Task 6 (404 Handling):** Added a catch-all middleware using `app.use((req, res) => ...)` to return a 404 status code for unknown URLs.
+- **Task 7 (Testing):** Verified each endpoint in the browser and confirmed the proper HTTP status codes (200 for valid routes and 404 for unmatched routes).
