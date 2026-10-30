@@ -1,7 +1,7 @@
 {
   "name": "lab-01",
   "version": "1.0.0",
-  "description": "Lab 1: Node.js and Express server",
+  "description": "Lab 1: Node.js and Express server - Puneeth Sai 252U1R1204 CSE 2D",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
