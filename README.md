@@ -40,13 +40,13 @@ Puneeth Sai · 252U1R1204 · CSE 2D
 
 ## Screenshots
 
-![Home route](screenshots/home.png)
+![Home route](lab-01/screenshots/home.png)
 
-![About route](screenshots/about.png)
+![About route](lab-01/screenshots/about.png)
 
-![Time route](screenshots/time.png)
+![Time route](lab-01/screenshots/time.png)
 
-![404 for an unknown path](screenshots/not-found.png)
+![404 for an unknown path](lab-01/screenshots/not-found.png)
 
 ## Notes: problems faced and how you solved them
 
